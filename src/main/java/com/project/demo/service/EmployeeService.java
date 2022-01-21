@@ -36,7 +36,10 @@ public class EmployeeService
 	EmployeeCriteriaRepository crepo;
 	
 	
-	
+	public List<Employee> getAll() {
+		List<Employee> employee = (List<Employee>) repo.findAll();
+		return employee;
+	}
 	
 	public Exception saveEmployee( Employee employee) throws InvalidIdException
 	{
@@ -88,6 +91,7 @@ public class EmployeeService
 				employee.setAddress(address);
 			
 			repo.save(employee);
+			
 			}
 			
 		}

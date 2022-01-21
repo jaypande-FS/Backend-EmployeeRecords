@@ -55,7 +55,10 @@ public class EmployeeController {
 	@Autowired
 	EmployeeService employeeservice;
 	
-	
+	@GetMapping(value="/getall")
+	public List<Employee> getAll(){
+		return employeeservice.getAll();
+	}
 	
 	
 	
